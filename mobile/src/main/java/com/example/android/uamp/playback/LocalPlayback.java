@@ -429,6 +429,11 @@ public final class LocalPlayback implements Playback {
         }
 
         @Override
+        public void onRepeatModeChanged(int repeatMode) {
+            // TODO
+        }
+
+        @Override
         public void onPlayerError(ExoPlaybackException error) {
             final String what;
             switch (error.type) {

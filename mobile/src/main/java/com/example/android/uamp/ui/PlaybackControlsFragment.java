@@ -150,7 +150,10 @@ public class PlaybackControlsFragment extends Fragment {
         if (metadata.getDescription().getIconUri() != null) {
             artUrl = metadata.getDescription().getIconUri().toString();
         }
-        if (!TextUtils.equals(artUrl, mArtUrl)) {
+
+        // TODO: check null/empty artUrl and put a placeholder instead.
+
+        if (!TextUtils.equals(artUrl, mArtUrl) && (artUrl != null)) {
             mArtUrl = artUrl;
             Bitmap art = metadata.getDescription().getIconBitmap();
             AlbumArtCache cache = AlbumArtCache.getInstance();
